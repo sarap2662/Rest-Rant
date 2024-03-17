@@ -1,4 +1,5 @@
 const router = require('express').Router()
+
 router.get('/', (req, res) => {
   let places = [{
     name: 'H-Thai-ML',
@@ -13,8 +14,16 @@ router.get('/', (req, res) => {
     cuisines: 'Coffee, Bakery',
     pic: '/images/Coffee.avif'
   }]
-  
+
   res.render('places/index', { places })
-  })
-  
-  module.exports = router
+})
+
+router.get('/new', (req, res) => {
+  res.render('places/new')
+})
+
+module.exports = router
+
+
+
+
