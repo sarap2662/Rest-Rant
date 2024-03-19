@@ -20,9 +20,10 @@ app.get('*', (req, res) => {
     res.render('error404')
 })
 
-app.get('/', (req, res) => {
+app.get('/new', (req, res) => {
     res.render('new')
 })
+
 
 // Listen for Connections
 app.listen(process.env.PORT)
