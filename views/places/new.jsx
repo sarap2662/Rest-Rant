@@ -52,7 +52,45 @@ function new_form() {
                             id='cuisines'
                             name='cuisines' required />
                     </div>
+            
                     <input className="btn btn-primary" type="submit" value="Add Place" />
+                </form>
+                <form method="POST" action="places/:id">
+                    <div className="author">
+                        <label htmlFor="author">Author</label>
+                        <input
+                            className="form-control"
+                            type="text"
+                            id='author'
+                            name='author' />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="content">Content</label>
+                        <input
+                            className="form-control"
+                            type="textarea"
+                            id='content'
+                            name='content'
+                            rows='3'
+                            cols='30' />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="rating">Rating</label>
+                        <input
+                            className="form-control"
+                            type="number"
+                            id='rating'
+                            name='rating'
+                            step={0.5}
+                            min='0'
+                            max='5' />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="rant">Rant</label>
+                        <input
+                            type="checkbox" />
+                    </div>
+                    <input className="btn btn-primary" type="submit" value="Add Comment" />
                 </form>
             </main>
         </Def>
